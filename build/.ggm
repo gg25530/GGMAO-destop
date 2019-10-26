@@ -1,0 +1,26 @@
+/* base de données du logiciel GGMAO develloppé par Jerome Humbert logiciel libre 
+/* creation de la base annee ; mois; jour ; clef prim table pieces ; clef prim table bt ; cle prim table machine ; clef prim commandes ;
+2018;1;1;0;0;0;0;
+// fin init variables generales base ////////
+/* clef prim ; prix ; qty ; fabricant ;    nom   ;  reference ; commentaire ; date annee ; date mois ; date jour ; fournisseur 1 ; fournisseur 2 ; fournisseur 3 ; lien doc ; lien plan ; lien photo
+// fin table pieces  ///////////
+/* table techniciens
+// fin table techs  ///////////
+/* table fournisseurs
+// fin table fournisseurs  ///////////
+/* table fabricants
+// fin table fabricants  ///////////
+/* table type de travail
+// fin table type travail  ///////////
+/* table ateliers
+// fin table ateliers  ///////////
+/* table destinataires
+// fin table destinataires  ///////////
+/* table bt's
+// fin table bt's  ///////////
+/* table commandes
+// fin table commandes  ///////////
+/* table machines
+// fin table machines  ///////////
+/* table categories
+// fin table categories  ///////////
