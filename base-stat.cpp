@@ -1,0 +1,16 @@
+#include "base.h"
+#include "pieces.h"
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include "machine.h"
+#include "bt.h"
+#include <ctime>
+#include <QStringList>
+#include <QDate>
+#include "commandes.h"
+#include "traceur.h"
+#include "trace.h"
+#include "fournisseurs.h"
+#include <QtWidgets>
+#include <QHostInfo>

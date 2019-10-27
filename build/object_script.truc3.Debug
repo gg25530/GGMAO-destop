@@ -28,6 +28,13 @@ INPUT(
 ./debug\mainwindow-stats.o
 ./debug\mainwindow-tri.o
 ./debug\unthread.o
+./debug\base-pieces.o
+./debug\base-machines.o
+./debug\base-bt.o
+./debug\base-commande.o
+./debug\base-stat.o
+./debug\base-fournisseurs.o
+./debug\base-tables.o
 ./debug\moc_mainwindow.o
 ./debug\moc_addpiecesbase.o
 ./debug\moc_addbtbase.o

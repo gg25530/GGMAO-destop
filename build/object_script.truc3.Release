@@ -28,6 +28,13 @@ INPUT(
 ./release\mainwindow-stats.o
 ./release\mainwindow-tri.o
 ./release\unthread.o
+./release\base-pieces.o
+./release\base-machines.o
+./release\base-bt.o
+./release\base-commande.o
+./release\base-stat.o
+./release\base-fournisseurs.o
+./release\base-tables.o
 ./release\moc_mainwindow.o
 ./release\moc_addpiecesbase.o
 ./release\moc_addbtbase.o

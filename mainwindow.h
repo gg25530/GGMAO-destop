@@ -50,6 +50,21 @@ public slots:
     void infbt5clicked();
     void infbt6clicked();
     void majonglets(int vue);
+    void btriatelierchanged();
+    void modifier_piece();
+    void modifier_machine();
+    void suppr_piece_machine();
+    void modifier_bt();
+    void modifier_commande();
+    void suppr_element_table();
+    void gestionparam();
+    void ajouterselectionmachine();
+    void fournisseur_selected_changed();
+    void modif_fournisseurs();
+    void closeEvent(QCloseEvent *event);
+
+    ///code dans tri.cpp
+    void tri_stat_changed();
     void tripieceschanged();
     void tripiecesactivated();
     void tribtchanged();
@@ -58,19 +73,6 @@ public slots:
     void tribtvisible(bool state);
     void tricommandevisible(bool state);
     void tristatsvisible(bool state);
-    void btriatelierchanged();
-    void modifier_piece();
-    void modifier_machine();
-    void suppr_piece_machine();
-    void modifier_bt();
-    void modifier_commande();
-    void suppr_element_table();
-    void tri_stat_changed();
-    void gestionparam();
-    void ajouterselectionmachine();
-    void fournisseur_selected_changed();
-    void modif_fournisseurs();
-    void closeEvent(QCloseEvent *event);
 
     ///code dans stats.cpp
     void stat_commandes_mois_maj();

@@ -79,6 +79,17 @@ void MainWindow::tripiecesactivated()
 }
 
 
+void MainWindow::tri_stat_changed()
+{
+
+    if(type_stat ==0) this->stat_commandes_mois_maj();
+    else if(type_stat ==1) this->stat_suivi_ateliers_maj();
+    else if(type_stat ==2) this->stat_suivi_tech_maj();
+    else if(type_stat ==3) this->stat_commandes_annee_maj();
+    else if(type_stat ==4) this->stat_suivi_annee_maj();
+
+}
+
 
 void MainWindow::tribtchanged()
 {

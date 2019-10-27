@@ -51,30 +51,30 @@ QT_MOC_LITERAL(16, 199, 13), // "infbt5clicked"
 QT_MOC_LITERAL(17, 213, 13), // "infbt6clicked"
 QT_MOC_LITERAL(18, 227, 10), // "majonglets"
 QT_MOC_LITERAL(19, 238, 3), // "vue"
-QT_MOC_LITERAL(20, 242, 16), // "tripieceschanged"
-QT_MOC_LITERAL(21, 259, 18), // "tripiecesactivated"
-QT_MOC_LITERAL(22, 278, 12), // "tribtchanged"
-QT_MOC_LITERAL(23, 291, 19), // "tricommandeschanged"
-QT_MOC_LITERAL(24, 311, 16), // "tripiecesvisible"
-QT_MOC_LITERAL(25, 328, 5), // "state"
-QT_MOC_LITERAL(26, 334, 12), // "tribtvisible"
-QT_MOC_LITERAL(27, 347, 18), // "tricommandevisible"
-QT_MOC_LITERAL(28, 366, 15), // "tristatsvisible"
-QT_MOC_LITERAL(29, 382, 18), // "btriatelierchanged"
-QT_MOC_LITERAL(30, 401, 14), // "modifier_piece"
-QT_MOC_LITERAL(31, 416, 16), // "modifier_machine"
-QT_MOC_LITERAL(32, 433, 19), // "suppr_piece_machine"
-QT_MOC_LITERAL(33, 453, 11), // "modifier_bt"
-QT_MOC_LITERAL(34, 465, 17), // "modifier_commande"
-QT_MOC_LITERAL(35, 483, 19), // "suppr_element_table"
-QT_MOC_LITERAL(36, 503, 16), // "tri_stat_changed"
-QT_MOC_LITERAL(37, 520, 12), // "gestionparam"
-QT_MOC_LITERAL(38, 533, 23), // "ajouterselectionmachine"
-QT_MOC_LITERAL(39, 557, 28), // "fournisseur_selected_changed"
-QT_MOC_LITERAL(40, 586, 18), // "modif_fournisseurs"
-QT_MOC_LITERAL(41, 605, 10), // "closeEvent"
-QT_MOC_LITERAL(42, 616, 12), // "QCloseEvent*"
-QT_MOC_LITERAL(43, 629, 5), // "event"
+QT_MOC_LITERAL(20, 242, 18), // "btriatelierchanged"
+QT_MOC_LITERAL(21, 261, 14), // "modifier_piece"
+QT_MOC_LITERAL(22, 276, 16), // "modifier_machine"
+QT_MOC_LITERAL(23, 293, 19), // "suppr_piece_machine"
+QT_MOC_LITERAL(24, 313, 11), // "modifier_bt"
+QT_MOC_LITERAL(25, 325, 17), // "modifier_commande"
+QT_MOC_LITERAL(26, 343, 19), // "suppr_element_table"
+QT_MOC_LITERAL(27, 363, 12), // "gestionparam"
+QT_MOC_LITERAL(28, 376, 23), // "ajouterselectionmachine"
+QT_MOC_LITERAL(29, 400, 28), // "fournisseur_selected_changed"
+QT_MOC_LITERAL(30, 429, 18), // "modif_fournisseurs"
+QT_MOC_LITERAL(31, 448, 10), // "closeEvent"
+QT_MOC_LITERAL(32, 459, 12), // "QCloseEvent*"
+QT_MOC_LITERAL(33, 472, 5), // "event"
+QT_MOC_LITERAL(34, 478, 16), // "tri_stat_changed"
+QT_MOC_LITERAL(35, 495, 16), // "tripieceschanged"
+QT_MOC_LITERAL(36, 512, 18), // "tripiecesactivated"
+QT_MOC_LITERAL(37, 531, 12), // "tribtchanged"
+QT_MOC_LITERAL(38, 544, 19), // "tricommandeschanged"
+QT_MOC_LITERAL(39, 564, 16), // "tripiecesvisible"
+QT_MOC_LITERAL(40, 581, 5), // "state"
+QT_MOC_LITERAL(41, 587, 12), // "tribtvisible"
+QT_MOC_LITERAL(42, 600, 18), // "tricommandevisible"
+QT_MOC_LITERAL(43, 619, 15), // "tristatsvisible"
 QT_MOC_LITERAL(44, 635, 23), // "stat_commandes_mois_maj"
 QT_MOC_LITERAL(45, 659, 24), // "stat_commandes_annee_maj"
 QT_MOC_LITERAL(46, 684, 20), // "stat_suivi_annee_maj"
@@ -109,18 +109,19 @@ QT_MOC_LITERAL(69, 1068, 15) // "inventairetocsv"
     "addelementtable\0fermerapp\0infbt1clicked\0"
     "infbt2clicked\0infbt3clicked\0infbt4clicked\0"
     "infbt5clicked\0infbt6clicked\0majonglets\0"
-    "vue\0tripieceschanged\0tripiecesactivated\0"
+    "vue\0btriatelierchanged\0modifier_piece\0"
+    "modifier_machine\0suppr_piece_machine\0"
+    "modifier_bt\0modifier_commande\0"
+    "suppr_element_table\0gestionparam\0"
+    "ajouterselectionmachine\0"
+    "fournisseur_selected_changed\0"
+    "modif_fournisseurs\0closeEvent\0"
+    "QCloseEvent*\0event\0tri_stat_changed\0"
+    "tripieceschanged\0tripiecesactivated\0"
     "tribtchanged\0tricommandeschanged\0"
     "tripiecesvisible\0state\0tribtvisible\0"
     "tricommandevisible\0tristatsvisible\0"
-    "btriatelierchanged\0modifier_piece\0"
-    "modifier_machine\0suppr_piece_machine\0"
-    "modifier_bt\0modifier_commande\0"
-    "suppr_element_table\0tri_stat_changed\0"
-    "gestionparam\0ajouterselectionmachine\0"
-    "fournisseur_selected_changed\0"
-    "modif_fournisseurs\0closeEvent\0"
-    "QCloseEvent*\0event\0stat_commandes_mois_maj\0"
+    "stat_commandes_mois_maj\0"
     "stat_commandes_annee_maj\0stat_suivi_annee_maj\0"
     "stat_suivi_tech_maj\0stat_suivi_ateliers_maj\0"
     "stat_commandes_mois\0stat_commandes_annee\0"
@@ -170,23 +171,23 @@ static const uint qt_meta_data_MainWindow[] = {
       21,    0,  354,    2, 0x0a /* Public */,
       22,    0,  355,    2, 0x0a /* Public */,
       23,    0,  356,    2, 0x0a /* Public */,
-      24,    1,  357,    2, 0x0a /* Public */,
-      26,    1,  360,    2, 0x0a /* Public */,
-      27,    1,  363,    2, 0x0a /* Public */,
-      28,    1,  366,    2, 0x0a /* Public */,
-      29,    0,  369,    2, 0x0a /* Public */,
-      30,    0,  370,    2, 0x0a /* Public */,
-      31,    0,  371,    2, 0x0a /* Public */,
-      32,    0,  372,    2, 0x0a /* Public */,
-      33,    0,  373,    2, 0x0a /* Public */,
-      34,    0,  374,    2, 0x0a /* Public */,
-      35,    0,  375,    2, 0x0a /* Public */,
-      36,    0,  376,    2, 0x0a /* Public */,
-      37,    0,  377,    2, 0x0a /* Public */,
-      38,    0,  378,    2, 0x0a /* Public */,
-      39,    0,  379,    2, 0x0a /* Public */,
-      40,    0,  380,    2, 0x0a /* Public */,
-      41,    1,  381,    2, 0x0a /* Public */,
+      24,    0,  357,    2, 0x0a /* Public */,
+      25,    0,  358,    2, 0x0a /* Public */,
+      26,    0,  359,    2, 0x0a /* Public */,
+      27,    0,  360,    2, 0x0a /* Public */,
+      28,    0,  361,    2, 0x0a /* Public */,
+      29,    0,  362,    2, 0x0a /* Public */,
+      30,    0,  363,    2, 0x0a /* Public */,
+      31,    1,  364,    2, 0x0a /* Public */,
+      34,    0,  367,    2, 0x0a /* Public */,
+      35,    0,  368,    2, 0x0a /* Public */,
+      36,    0,  369,    2, 0x0a /* Public */,
+      37,    0,  370,    2, 0x0a /* Public */,
+      38,    0,  371,    2, 0x0a /* Public */,
+      39,    1,  372,    2, 0x0a /* Public */,
+      41,    1,  375,    2, 0x0a /* Public */,
+      42,    1,  378,    2, 0x0a /* Public */,
+      43,    1,  381,    2, 0x0a /* Public */,
       44,    0,  384,    2, 0x0a /* Public */,
       45,    0,  385,    2, 0x0a /* Public */,
       46,    0,  386,    2, 0x0a /* Public */,
@@ -236,10 +237,6 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Bool,   25,
-    QMetaType::Void, QMetaType::Bool,   25,
-    QMetaType::Void, QMetaType::Bool,   25,
-    QMetaType::Void, QMetaType::Bool,   25,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -247,12 +244,16 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 32,   33,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 42,   43,
+    QMetaType::Void, QMetaType::Bool,   40,
+    QMetaType::Void, QMetaType::Bool,   40,
+    QMetaType::Void, QMetaType::Bool,   40,
+    QMetaType::Void, QMetaType::Bool,   40,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -306,27 +307,27 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 14: _t->infbt5clicked(); break;
         case 15: _t->infbt6clicked(); break;
         case 16: _t->majonglets((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 17: _t->tripieceschanged(); break;
-        case 18: _t->tripiecesactivated(); break;
-        case 19: _t->tribtchanged(); break;
-        case 20: _t->tricommandeschanged(); break;
-        case 21: _t->tripiecesvisible((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 22: _t->tribtvisible((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 23: _t->tricommandevisible((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 24: _t->tristatsvisible((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 25: _t->btriatelierchanged(); break;
-        case 26: _t->modifier_piece(); break;
-        case 27: _t->modifier_machine(); break;
-        case 28: _t->suppr_piece_machine(); break;
-        case 29: _t->modifier_bt(); break;
-        case 30: _t->modifier_commande(); break;
-        case 31: _t->suppr_element_table(); break;
-        case 32: _t->tri_stat_changed(); break;
-        case 33: _t->gestionparam(); break;
-        case 34: _t->ajouterselectionmachine(); break;
-        case 35: _t->fournisseur_selected_changed(); break;
-        case 36: _t->modif_fournisseurs(); break;
-        case 37: _t->closeEvent((*reinterpret_cast< QCloseEvent*(*)>(_a[1]))); break;
+        case 17: _t->btriatelierchanged(); break;
+        case 18: _t->modifier_piece(); break;
+        case 19: _t->modifier_machine(); break;
+        case 20: _t->suppr_piece_machine(); break;
+        case 21: _t->modifier_bt(); break;
+        case 22: _t->modifier_commande(); break;
+        case 23: _t->suppr_element_table(); break;
+        case 24: _t->gestionparam(); break;
+        case 25: _t->ajouterselectionmachine(); break;
+        case 26: _t->fournisseur_selected_changed(); break;
+        case 27: _t->modif_fournisseurs(); break;
+        case 28: _t->closeEvent((*reinterpret_cast< QCloseEvent*(*)>(_a[1]))); break;
+        case 29: _t->tri_stat_changed(); break;
+        case 30: _t->tripieceschanged(); break;
+        case 31: _t->tripiecesactivated(); break;
+        case 32: _t->tribtchanged(); break;
+        case 33: _t->tricommandeschanged(); break;
+        case 34: _t->tripiecesvisible((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 35: _t->tribtvisible((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 36: _t->tricommandevisible((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 37: _t->tristatsvisible((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 38: _t->stat_commandes_mois_maj(); break;
         case 39: _t->stat_commandes_annee_maj(); break;
         case 40: _t->stat_suivi_annee_maj(); break;

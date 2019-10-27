@@ -54,6 +54,13 @@ SOURCES += \
     mainwindow-stats.cpp \
     mainwindow-tri.cpp \
     unthread.cpp \
+    base-pieces.cpp \
+    base-machines.cpp \
+    base-bt.cpp \
+    base-commande.cpp \
+    base-stat.cpp \
+    base-fournisseurs.cpp \
+    base-tables.cpp
 
 HEADERS += \
         mainwindow.h \
