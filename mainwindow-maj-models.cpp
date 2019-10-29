@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include <QtWidgets>
+#include <QTimer>
 #include <iostream>
 #include <ctime>
 #include <sstream>
@@ -26,7 +27,6 @@ void MainWindow::majmodelpieces()
     tablopiecesint.clear();
     modelepieces->clear();
     int x=0;
-    std::string::size_type n;
     QStringList titre;
     titre <<  "nom" << "fabricant" << "reference" << "commentaires" << "fournisseur 1" << "fournisseur 2" << "fournisseur 3" << "emplacement" << "adresse" << "categorie"<< "doc" << "plan" << "photo"  << "prix" << "quantité" << "controlée le :" << "n°";
     modelepieces->setHorizontalHeaderLabels(titre);
@@ -244,26 +244,24 @@ void MainWindow::majmodelmach3()
 void MainWindow::majmodelbt()
 {
     std::cout << "majbt" << std::endl;
-
     modelebt->clear();
     QStringList titre3;
     titre3 << "tech" << "type de bt" << "date" << "atelier" << "machine" << "temps d'inter" << "commentaires" << "visé :"  << "clef";
     modelebt->setHorizontalHeaderLabels(titre3);
     int x=0;
-    std::string::size_type n;
     for(int i = (b.nbbts()-1) ; i > -1; i--)
      {
         if(!btri->isChecked() || (b.bt_tech(i).find(btritech->currentText().toStdString())!= std::string::npos && b.bt_type(i).find(btritype->currentText().toStdString())!= std::string::npos && b.bt_atelier(i).find(btriatelier->currentText().toStdString())!= std::string::npos && b.bt_machine(i).find(btrimachine->currentText().toStdString())!= std::string::npos && b.bt_commentaire(i).find(btricommentaire->text().toStdString())!= std::string::npos && b.bt_slu(i).find(btrilu->currentText().toStdString())!= std::string::npos && b.bt_check_date(i,btridatea->text().toStdString(),btridateb->text().toStdString()) == 0 ))
         {
-        modelebt->setItem(x, 0,new QStandardItem(QString::fromStdString(b.bt_tech(i))));
-        modelebt->setItem(x, 1,new QStandardItem(QString::fromStdString(b.bt_type(i))));
-        modelebt->setItem(x, 2, new QStandardItem(QString::fromStdString(b.bt_date(i))));
-        modelebt->setItem(x, 3, new QStandardItem(QString::fromStdString(b.bt_atelier(i))));
-        modelebt->setItem(x, 4,new QStandardItem(QString::fromStdString(b.bt_machine(i))));
-        modelebt->setItem(x, 5,new QStandardItem(QString::fromStdString(b.bt_temps(i))));
-        modelebt->setItem(x, 6,new QStandardItem(QString::fromStdString(b.bt_commentaire(i))));
-        modelebt->setItem(x, 7,new QStandardItem(QString::fromStdString(b.bt_slu(i))));
-        modelebt->setItem(x, 8,new QStandardItem(QString::fromStdString(b.bt_skey(i))));
+        modelebt->setItem(x, 0,new QStandardItem(b.bt_tech(i).c_str()));
+        modelebt->setItem(x, 1,new QStandardItem(b.bt_type(i).c_str()));
+        modelebt->setItem(x, 2, new QStandardItem(b.bt_date(i).c_str()));
+        modelebt->setItem(x, 3, new QStandardItem(b.bt_atelier(i).c_str()));
+        modelebt->setItem(x, 4,new QStandardItem(b.bt_machine(i).c_str()));
+        modelebt->setItem(x, 5,new QStandardItem(b.bt_temps(i).c_str()));
+        modelebt->setItem(x, 6,new QStandardItem(b.bt_commentaire(i).c_str()));
+        modelebt->setItem(x, 7,new QStandardItem(b.bt_slu(i).c_str()));
+        modelebt->setItem(x, 8,new QStandardItem(b.bt_skey(i).c_str()));
         x++;
         }
     }
@@ -275,7 +273,6 @@ void MainWindow::majmodelcommandes()
 
     modelecommandes->clear();
     int x=0;
-    std::string::size_type n;
     QStringList titre4;
     titre4 << "fournisseur" << "n°de commande" << "montant ht" << "date" << "destinataire" << "commentaires" << "clef" ;
     modelecommandes->setHorizontalHeaderLabels(titre4);

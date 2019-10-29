@@ -21,6 +21,14 @@ public slots:
     QPushButton *definepathButton;
     QLineEdit *path;
     QLineEdit *name;
+    QLineEdit *largeur;
+    QLineEdit *hauteur;
+    QLineEdit *nbsaves;
+    QCheckBox *ouvertureauto;
+    QCheckBox *memodatenewbt;
+    QCheckBox *memodatenewcommande;
+    QCheckBox *saveauto;
+    QCheckBox *fullscreen;
 
 };
 

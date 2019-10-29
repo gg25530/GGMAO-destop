@@ -99,7 +99,6 @@ void base::supprfabricant(std::string f)
 
 void base::supprtech(std::string f)
 {
-    std::cout << f << m_tech.size() << std::endl;
     std::vector <std::string> tab;
     tab.clear();
     for (uint i = 0;i < m_tech.size();i++)

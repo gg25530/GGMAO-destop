@@ -37,6 +37,14 @@ base::base()
       m_categorie.clear();
       m_path = "";
       m_name ="";
+      m_largeur = 800;
+      m_hauteur = 600;
+      m_nbsaves = 25;
+      m_fullscreen = false;
+      m_openauto = false;
+      m_saveauto = false;
+      m_memodatebt = false;
+      m_memodatecommande = false;
 }
 
 int base::iscorrompue()
@@ -65,6 +73,92 @@ void base::setname(std::string dossier)
     m_name = dossier;
 }
 
+bool base::fullscreen() const
+{
+    return m_fullscreen;
+}
+
+void base::setfullscreen(bool b)
+{
+    m_fullscreen = b;
+}
+
+bool base::openauto() const
+{
+    return m_openauto;
+}
+
+void base::setopenauto(bool b)
+{
+    m_openauto = b;
+}
+
+bool base::saveauto() const
+{
+    return m_saveauto;
+}
+
+void base::setsaveauto(bool b)
+{
+    m_saveauto = b;
+}
+
+bool base::memobt() const
+{
+    return m_memodatebt;
+}
+
+void base::setmemobt(bool b)
+
+{
+    m_memodatebt= b;
+}
+
+bool base::memocommande() const
+{
+    return m_memodatecommande;
+}
+
+void base::setmemocommande(bool b)
+{
+    m_memodatecommande = b;
+}
+
+int base::largeur() const
+{
+    return m_largeur;
+}
+
+void base::setlargeur(int i)
+{
+    if(i > 799 && i < 2000) m_largeur = i;
+}
+
+int base::hauteur() const
+{
+    return m_hauteur;
+}
+
+void base::sethauteur(int i)
+{
+    if(i > 479 && i < 1800) m_hauteur = i;
+}
+
+int base::nbsaves() const
+{
+    return m_nbsaves;
+}
+
+void base::setnbsaves(int i)
+{
+    if(i < 0 || i > 500)
+    {}
+    else
+    {
+     m_nbsaves = i;
+    }
+}
+
 void base::majbase()
 {
 
@@ -72,7 +166,6 @@ std::string temp="";
     temp = m_path;
     temp += m_name;
     temp += ".ggm";
-
     std::ifstream flux(temp.c_str());
     int tableactuelle = 0;
     std::stringstream ss;

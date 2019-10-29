@@ -30,6 +30,22 @@ public:
     void setpath(std::string dossier);
     std::string name() const;
     void setname(std::string dossier);
+    bool fullscreen() const;
+    void setfullscreen(bool b);
+    bool openauto() const;
+    void setopenauto(bool b);
+    bool saveauto() const;
+    void setsaveauto(bool b);
+    bool memobt() const;
+    void setmemobt(bool b);
+    bool memocommande() const;
+    void setmemocommande(bool b);
+    int largeur() const;
+    void setlargeur(int i);
+    int hauteur() const;
+    void sethauteur(int i);
+    int nbsaves() const;
+    void setnbsaves(int i);
 
 
     /// dans base-tables.cpp
@@ -176,6 +192,15 @@ private:
     datee age;
     std::string m_path;
     std::string m_name;
+    int m_largeur;
+    int m_hauteur;
+    int m_nbsaves;
+    bool m_fullscreen;
+    bool m_openauto;
+    bool m_saveauto;
+    bool m_memodatebt;
+    bool m_memodatecommande;
+
     std::string date_bt;
     std::string date_commande;
 

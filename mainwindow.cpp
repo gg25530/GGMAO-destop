@@ -678,73 +678,194 @@ connect(p7_mail2,SIGNAL(textEdited(const QString &)), this, SLOT(modif_fournisse
 connect(p7_commentaires,SIGNAL(textChanged()), this, SLOT(modif_fournisseurs()));
 
 /////////////////////////////////////////
-
 std::ifstream flux("parametres.ini");
-     if(flux)
-     {
-      std::string t="";
+if(flux)
+{
+    bool openreussi = true;
+    time_t now = time(0);
+    tm *ltm = localtime(&now);
+    std::string temp="";
+    std::stringstream convert;
+    convert.clear();
+    if ((ltm->tm_mday)<10)
+    {
+        convert << "0";
+    }
+    convert << (ltm->tm_mday);
+    if ((1 + ltm->tm_mon)<10)
+    {
+        convert << "0";
+    }
+    convert << (1 + ltm->tm_mon);
+    convert <<  (1900 + ltm->tm_year);
+    temp = convert.str();
+
+    b.setdate_bt_param(temp);
+    b.setdate_commande_param(temp);
+
+
+    std::string t="";
+    std::getline(flux,t);
+      if(t == " // emplacement de l'application")
+      {
+       std::getline(flux,t);
+       b.setpath(t);
+       t ="";
+      }
+      else
+      {
+          openreussi = false;
+      }
       std::getline(flux,t);
-
-      time_t now = time(0);
-      tm *ltm = localtime(&now);
-      std::string temp="";
-      std::stringstream convert;
-      convert.clear();
-      if ((ltm->tm_mday)<10)
+      if(t == " // nom de l'ordinateur")
       {
-          convert << "0";
+       std::getline(flux,t);
+       b.setname(t);
+       t ="";
       }
-      convert << (ltm->tm_mday);
-      if ((1 + ltm->tm_mon)<10)
+      else
       {
-          convert << "0";
+          openreussi = false;
       }
-      convert << (1 + ltm->tm_mon);
-      convert <<  (1900 + ltm->tm_year);
-      temp = convert.str();
+      std::getline(flux,t);
+      if(t == " // ouverture auto")
+      {
+       std::getline(flux,t);
+          if(t == "oui") b.setopenauto(true);
+          else if(t == "non") b.setopenauto(false);
+          else openreussi=false;
+       t ="";
+      }
+      else
+      {
+          openreussi = false;
+      }
+      std::getline(flux,t);
+      if(t == " // memorisation date BT")
+      {
+       std::getline(flux,t);
+       if(t == "oui") b.setmemobt(true);
+       else if(t == "non") b.setmemobt(false);
+       else
+       {
+           openreussi=false;
+       }
+       t ="";
+      }
+      else
+      {
+          openreussi = false;
+      }
+      std::getline(flux,t);
+      if(t == " // memorisation date commande")
+      {
+       std::getline(flux,t);
+       if(t == "oui") b.setmemocommande(true);
+       else if(t == "non") b.setmemocommande(false);
+       else openreussi=false;
+       t ="";
+      }
+      else
+      {
+          openreussi = false;
+      }
+      std::getline(flux,t);
+      if(t == " // plein ecran")
+      {
+       std::getline(flux,t);
+       if(t == "oui") b.setfullscreen(true);
+       else if(t == "non") b.setfullscreen(false);
+       else openreussi=false;
+       t ="";
+      }
+      else
+      {
+          openreussi = false;
+      }
+      std::getline(flux,t);
+      if(t == " // largeur")
+      {
+       std::getline(flux,t);
+       b.setlargeur(std::atoi(t.c_str()));
+       t ="";
+      }
+      else
+      {
+          openreussi = false;
+      }
+      std::getline(flux,t);
+      if(t == " // hauteur")
+      {
+       std::getline(flux,t);
+       b.sethauteur(std::atoi(t.c_str()));
+       t ="";
+      }
+      else
+      {
+          openreussi = false;
+      }
 
-      b.setdate_bt_param(temp);
-      b.setdate_commande_param(temp);
+      std::getline(flux,t);
+      if(t == " // nombre de sauvegarde")
+      {
+       std::getline(flux,t);
+       b.setnbsaves(std::atoi(t.c_str()));
+       t ="";
+      }
+      else
+      {
+          openreussi = false;
+      }
+      std::getline(flux,t);
+      if(t == " // sauvegarde auto")
+      {
+       std::getline(flux,t);
+       if(t == "oui") b.setsaveauto(true);
+       else if(t == "non") b.setsaveauto(false);
+       else openreussi=false;
+       t ="";
+      }
+      else
+      {
+          openreussi = false;
+      }
 
-        if(t != "")
-        {
-         b.setpath(t);
-         t ="";
-         std::getline(flux,t);
-
-         b.setname(t);
-         t ="";
-         std::cout << b.path() << "et : " << b.name() << std::endl;
-         b.majbase();
-         if(b.iscorrompue() !=2)
-         {
-         QMessageBox::critical(this, "erreur", "impossible d'ouvrir la base");
-         }
-         else {
+      if(openreussi)
+      {
+      b.majbase();
+      if(b.iscorrompue() !=2)
+      {
+      QMessageBox::critical(this, "erreur", "impossible d'ouvrir la base");
+      }
+      else {
 
 
-     t = "la base contient : ";
-     t +=  std::to_string(b.nbpieces());
-     t += " pieces \n";
-     t +=  std::to_string(b.nbbts());
-     t += " bt's \n";
-     t +=  std::to_string(b.nbmachines());
-     t += " machines \n";
-     t +=  std::to_string(b.nbcommandes());
-     t += " commandes \n";
+  t = "la base contient : ";
+  t +=  std::to_string(b.nbpieces());
+  t += " pieces \n";
+  t +=  std::to_string(b.nbbts());
+  t += " bt's \n";
+  t +=  std::to_string(b.nbmachines());
+  t += " machines \n";
+  t +=  std::to_string(b.nbcommandes());
+  t += " commandes \n";
 
-     if (QMessageBox::information (this, "ouverture reussi",t.c_str()) == QMessageBox::Ok)
-     {
-        // t1 = new UnThread(this);
-         this->majtables();
-         this->majmodelpieces();
-         this->maj_fournisseurs();
-     }
-         }
-        }
-     }
-
+  if (QMessageBox::information (this, "ouverture reussi",t.c_str()) == QMessageBox::Ok)
+  {
+     // t1 = new UnThread(this);
+      this->majtables();
+      this->majmodelpieces();
+      this->maj_fournisseurs();
+  }
 }
+     }
+      else
+          {
+          QMessageBox::critical(this, "Erreur","parametres.ini corrompu\n effacez le dans le\n dossier de l'application\n puis redemarrez l'application");
+          }
+}
+}
+
 
 MainWindow::~MainWindow()  // destructeur
 {
@@ -1612,7 +1733,6 @@ void MainWindow::fournisseur_selected_changed()
     p7_mail1->setText(four.mail_1().c_str());
     p7_mail2->setText(four.mail_2().c_str());
     p7_commentaires->setText(four.commentaire().c_str());
-    std::cout << "test" <<std::endl;
 }
 
 
@@ -1631,12 +1751,7 @@ void MainWindow::modif_fournisseurs()
     four.setmail_1(p7_mail1->text().toStdString());
     four.setmail_2(p7_mail2->text().toStdString());
     four.setcommentaire(p7_commentaires->toPlainText().toStdString());
-   std::cout << four.commentaire() << std::endl;
     b.setfournisseur(four);
-    std::cout << "truc" << std::endl;
-
-
-
 }
 
 
